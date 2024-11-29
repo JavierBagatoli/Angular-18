@@ -1,0 +1,21 @@
+.card {
+  width: 20rem;
+  margin: 1rem;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  border: 1px;
+  border-style: solid;
+  text-align: center;
+
+  img {
+    margin-left: 1rem;
+    width: 18rem;
+    border: 1px;
+    border-style: solid;
+  }
+  p {
+    padding: 1rem;
+    text-align: justify;
+  }
+}
