@@ -14,12 +14,14 @@ import { CardComponent } from './card/card.component';
 import { MatCardModule} from '@angular/material/card';
 import { CommonModule } from '@angular/common';
 import { InputComponent } from './generic/input/input.component';
+import { BackgroundComponent } from './generic/background/background.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CardComponent,
     InputComponent,
+    BackgroundComponent,
   ],
   imports: [
     BrowserModule,
@@ -32,7 +34,7 @@ import { InputComponent } from './generic/input/input.component';
     FormsModule,
     MatCardModule,
     CommonModule,
-    ReactiveFormsModule 
+    ReactiveFormsModule,
   ],
   providers: [
     provideAnimationsAsync()

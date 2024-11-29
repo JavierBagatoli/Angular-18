@@ -90,10 +90,10 @@ $mat-dark-theme: mat.define-dark-theme((
 
   @include mat.all-component-colors($mat-dark-theme);
 
-section {
-  display: flex;
+section,div {
+  display: inherit;
 }
 body{
-    background-color: #150c4a;
+    background-color: #1b1b1b;
 }
 html, body { height: 100%; padding: 0; margin: 0;}

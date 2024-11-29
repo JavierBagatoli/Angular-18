@@ -1,4 +1,6 @@
-<section class="flex flex-row navbar">
+<app-background/>
+
+<section class="navbar">
   <app-input
     [form]="form"
     [controlName]="'searchField'"
@@ -16,6 +18,6 @@
   </button>
 </section>
 
-<section class="max-width">
+<section class="max-width flex flex-row">
   <app-cards *ngFor="let card of sourceToShow" [data]="card" />
 </section>

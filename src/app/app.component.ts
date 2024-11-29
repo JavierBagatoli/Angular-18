@@ -26,16 +26,19 @@ export class AppComponent {
     description: "Esta tradicion se hacia cada mes para balancear el destino del mundo y equilibrar el mundo",
     img: null
   }]
+
   sourceToShow : {
     title: string,
     age: string,
     description: string,
     img: string | null
   }[] = []
+
   constructor(private _fb:FormBuilder){
     this.form = new FormGroup({
       searchField: this._fb.control<string>(''),
     })
+    this.sourceToShow = this.source;
   }
 
   search(){
