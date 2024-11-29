@@ -1,8 +1,10 @@
 <section class="section-text">
     <section class="background-animation">
-      <div *ngFor="let index of vectorOfWords.concat(vectorOfWords)">
-        <h1 *ngFor="let word of vectorOfWords">{{word}}</h1>
+      <div class="fix-poss" *ngFor="let index of vectorOfWords.concat(vectorOfWords); let j = index">
+        <div [ngClass]="{'animation-inverse': j % 2 === 0}">
+          <h1 
+            *ngFor="let word of vectorOfWords">{{word}}</h1>
+        </div>
       </div>
     </section>
   </section>
-  

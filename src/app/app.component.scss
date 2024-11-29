@@ -1,14 +1,15 @@
 .navbar {
   background: linear-gradient(217deg, #000000, #3b5965);
   background-size: 400% 400%;
-
   -webkit-animation: AnimationName 9s ease infinite;
   -moz-animation: AnimationName 9s ease infinite;
   animation: AnimationName 9s ease infinite;
+
   padding: 1rem;
   padding-left: 2rem;
   height: 62px;
   display: flex;
+  z-index: 0;
 }
 
 .max-width {
@@ -23,16 +24,29 @@
 
 @-webkit-keyframes AnimationName {
   0%{background-position:0% 7%}
-  50%{background-position:100% 94%}
+  50%{background: position 0% 100%}
   100%{background-position:0% 7%}
 }
 @-moz-keyframes AnimationName {
   0%{background-position:0% 7%}
-  50%{background-position:100% 94%}
+  50%{background-position:0% 100%}
   100%{background-position:0% 7%}
 }
 @keyframes AnimationName {
   0%{background-position:0% 7%}
-  50%{background-position:100% 94%}
+  50%{background-position:0% 100%}
   100%{background-position:0% 7%}
+}
+
+.app-background{
+  z-index: -10;
+}
+
+.z-index{
+  z-index: 0;
+}
+
+app-background{
+  z-index: -1;
+  position: absolute;
 }
