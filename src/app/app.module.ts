@@ -10,18 +10,19 @@ import { MatButtonModule} from '@angular/material/button';
 import { MatInputModule} from '@angular/material/input';
 import { MatFormFieldModule} from '@angular/material/form-field';
 import { FormsModule, ReactiveFormsModule} from '@angular/forms';
-import { CardComponent } from './card/card.component';
+
 import { MatCardModule} from '@angular/material/card';
 import { CommonModule } from '@angular/common';
 import { InputComponent } from './generic/input/input.component';
 import { BackgroundComponent } from './generic/background/background.component';
+import { CardComponent } from './card/card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CardComponent,
     InputComponent,
     BackgroundComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,

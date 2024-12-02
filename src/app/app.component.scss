@@ -50,3 +50,15 @@ app-background{
   z-index: -1;
   position: absolute;
 }
+
+.grid-test{
+  width: 95vw;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 300px);
+  justify-content: space-around;
+  grid-gap: 20px;
+}
+
+.fixed{
+  position: fixed;
+}

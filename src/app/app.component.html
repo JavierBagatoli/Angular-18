@@ -1,4 +1,4 @@
-<app-background/>
+<app-background class="fixed"/>
 
 <section class="navbar">
   <app-input
@@ -18,6 +18,6 @@
   </button>
 </section>
 
-<section class="z-index max-width flex flex-row">
-  <app-cards *ngFor="let card of sourceToShow" [data]="card" />
+<section class="z-index grid-test">
+  <app-card *ngFor="let card of sourceToShow" [data]="card"/>
 </section>

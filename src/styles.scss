@@ -90,9 +90,6 @@ $mat-dark-theme: mat.define-dark-theme((
 
   @include mat.all-component-colors($mat-dark-theme);
 
-section,div {
-  display: inherit;
-}
 body{
     background-color: #1b1b1b;
 }
