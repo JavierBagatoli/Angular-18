@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import { Card } from './interfaces/card.interface';
 
 @Component({
   selector: 'app-root',
@@ -9,13 +10,7 @@ import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 export class AppComponent {
   form: FormGroup<FormSearchView>
   title = 'proyect-of-cards';
-  source: {
-    title: string,
-    age: string,
-    label?: string,
-    description: string,
-    img: string | null
-  }[] = [{
+  source: Card[] = [{
     title: "El catacentro",
     age: "2021",
     label: "Navidad",
@@ -71,12 +66,7 @@ export class AppComponent {
     img: null
   }]
 
-  sourceToShow : {
-    title: string,
-    age: string,
-    description: string,
-    img: string | null
-  }[] = []
+  sourceToShow : Card[] = []
 
   constructor(private _fb:FormBuilder){
     this.form = new FormGroup({
