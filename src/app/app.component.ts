@@ -12,56 +12,56 @@ export class AppComponent {
   title = 'proyect-of-cards';
   source: Card[] = [{
     title: "El catacentro",
-    age: "2021",
+    age: 2021,
     label: "Navidad",
     description: "Durante los inicios del servidor fuimos un grupo diverso que llego",
     img: null
   },
   {
     title: "Navidad",
-    age: "2021",
+    age: 2021,
     description: "Esta tradicion se hacia cada mes para balancear el destino del mundo y equilibrar el mundo",
     img: null
   },
   {
     title: "Navidad",
-    age: "2021",
+    age: 2021,
     description: "Esta tradicion se hacia cada mes para balancear el destino del mundo y equilibrar el mundo",
     img: null
   },
   {
     title: "Navidad",
-    age: "2021",
+    age: 2021,
     description: "Esta tradicion se hacia cada mes para balancear el destino del mundo y equilibrar el mundo",
     img: null
   },
   {
     title: "Navidad",
-    age: "2021",
+    age: 2021,
     description: "Esta tradicion se hacia cada mes para balancear el destino del mundo y equilibrar el mundo",
     img: null
   },
   {
     title: "Navidad",
-    age: "2021",
+    age: 2021,
     description: "Esta tradicion se hacia cada mes para balancear el destino del mundo y equilibrar el mundo",
     img: null
   },
   {
     title: "Navidad",
-    age: "2021",
+    age: 2021,
     description: "Esta tradicion se hacia cada mes para balancear el destino del mundo y equilibrar el mundo",
     img: null
   },
   {
     title: "Navidad",
-    age: "2021",
+    age: 2021,
     description: "Esta tradicion se hacia cada mes para balancear el destino del mundo y equilibrar el mundo",
     img: null
   },
   {
     title: "Navidad",
-    age: "2021",
+    age: 2021,
     description: "Esta tradicion se hacia cada mes para balancear el destino del mundo y equilibrar el mundo",
     img: null
   }]
@@ -73,6 +73,10 @@ export class AppComponent {
       searchField: this._fb.control<string>(''),
     })
     this.sourceToShow = this.source;
+  }
+
+  addNewCard(obj: unknown){
+    this.source.push(obj as Card);
   }
 
   search(){

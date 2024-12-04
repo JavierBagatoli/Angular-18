@@ -1,0 +1,38 @@
+<div class="body-form">
+  <section class="flex flex-column aling-content-center">
+    <h1>Add Card</h1>
+  </section>
+  <section class="flex flex-column">
+    <app-input
+      [form]="form"
+      [controlName]="'title'"
+      [label]="'Title'"
+    />
+
+    <app-input
+      [form]="form"
+      [controlName]="'label'"
+      [label]="'Label'"
+    />
+
+    <app-input
+      [form]="form"
+      [controlName]="'age'"
+      [label]="'Age'"
+      [type]="'number'"
+    />
+
+    <app-textarea
+      [form]="form"
+      [controlName]="'description'"
+      [label]="'Description'"
+    />
+    
+    <div>
+      <button
+        [disabled]="form.invalid"
+        mat-flat-button 
+        (click)="send()">crear</button>
+    </div>
+  </section>
+</div>

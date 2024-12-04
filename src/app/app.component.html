@@ -18,6 +18,8 @@
   </button>
 </section>
 
+<app-form (addNewCard)="addNewCard($event)"/>
+
 <section class="z-index grid-test">
   <app-card *ngFor="let card of sourceToShow" [data]="card"/>
 </section>

@@ -1,0 +1,12 @@
+<ng-container [formGroup]="form">
+    <mat-form-field appearance="outline" [ngClass]="size">
+        <mat-label *ngIf="label">{{label }}</mat-label>
+        <textarea matInput
+            cdkTextareaAutosize
+            [formControlName]="controlName"
+            #autosize="cdkTextareaAutosize"
+            cdkAutosizeMinRows="1"
+            cdkAutosizeMaxRows="5">
+        </textarea>
+    </mat-form-field>
+</ng-container>

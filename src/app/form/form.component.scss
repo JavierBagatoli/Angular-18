@@ -1,0 +1,17 @@
+h1{
+  justify-self: center;
+  color: white;
+}
+
+.body-form{
+  width: 20%;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(0deg, rgba(40,44,52,1) 0%, rgba(17,0,32,.5) 100%);
+
+  section{
+    display: flex;
+    flex-direction: column;    
+  }
+}

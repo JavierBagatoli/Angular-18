@@ -16,13 +16,18 @@ import { CommonModule } from '@angular/common';
 import { InputComponent } from './generic/input/input.component';
 import { BackgroundComponent } from './generic/background/background.component';
 import { CardComponent } from './card/card.component';
+import { FormComponent } from './form/form.component';
+import { TextFieldModule } from '@angular/cdk/text-field';
+import { TextareaComponent } from './generic/textarea/textarea.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     InputComponent,
     BackgroundComponent,
-    CardComponent
+    CardComponent,
+    FormComponent,
+    TextareaComponent
   ],
   imports: [
     BrowserModule,
@@ -36,6 +41,7 @@ import { CardComponent } from './card/card.component';
     MatCardModule,
     CommonModule,
     ReactiveFormsModule,
+    TextFieldModule,
   ],
   providers: [
     provideAnimationsAsync()
