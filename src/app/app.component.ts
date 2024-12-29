@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { Card } from './interfaces/card.interface';
+import {MatDialog} from '@angular/material/dialog';
+import { FormComponent } from './form/form.component';
 
 @Component({
   selector: 'app-root',
@@ -68,7 +70,9 @@ export class AppComponent {
 
   sourceToShow : Card[] = []
 
-  constructor(private _fb:FormBuilder){
+  constructor(
+    private _fb:FormBuilder,
+    public dialog: MatDialog){
     this.form = new FormGroup({
       searchField: this._fb.control<string>(''),
     })
@@ -82,6 +86,30 @@ export class AppComponent {
   search(){
     this.sourceToShow = this.source.filter(
       (data) => data.title.toLocaleLowerCase().includes(this.form?.value?.searchField?.toLocaleLowerCase() || ''))
+  }
+
+  openDialog() {
+    const dialogRef = this.dialog.open(FormComponent, {
+        width: '30rem',
+        autoFocus: false,
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      if(result){
+        this.addNewCard(result);
+      }
+    });
+  }
+
+  exportData(){
+    const sJson = JSON.stringify(this.source);
+    const element = document.createElement('a');
+    element.setAttribute('href', "data:text/json;charset=UTF-8," + encodeURIComponent(sJson));
+    element.setAttribute('download', "data_cards.json");
+    element.style.display = 'none';
+    document.body.appendChild(element);
+    element.click(); // simulate click
+    document.body.removeChild(element);
   }
 }
 

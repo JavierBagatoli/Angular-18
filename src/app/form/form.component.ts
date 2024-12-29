@@ -1,5 +1,6 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 
 
 @Component({
@@ -9,10 +10,11 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class FormComponent implements OnInit{
   public form: FormGroup
-  @Output() addNewCard = new EventEmitter()
 
   constructor(
-    private _fb: FormBuilder
+    private _fb: FormBuilder,
+    public dialogRef: MatDialogRef<FormComponent>,
+    @Inject(MAT_DIALOG_DATA) public data = {},
   ){}
 
   ngOnInit(): void {
@@ -20,7 +22,7 @@ export class FormComponent implements OnInit{
   }
 
   send(){
-    this.addNewCard.emit(this.form.value)
+    this.dialogRef.close(this.form.value);
   }
 
   private _createForm():FormGroup{

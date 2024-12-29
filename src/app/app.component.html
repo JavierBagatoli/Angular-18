@@ -1,25 +1,40 @@
 <app-background class="fixed"/>
 
 <section class="navbar">
-  <app-input
-    [form]="form"
-    [controlName]="'searchField'"
-    [label]="'buscar'"
-    [type]="'text'"
-  />
+  <section>
 
-  <button
-    class="buton-search"
-    mat-mini-fab
-    aria-label="Example icon button with a menu icon"
-    (click)="search()"
-  >
-    <mat-icon>search</mat-icon>
-  </button>
+    <app-input
+      [form]="form"
+      [controlName]="'searchField'"
+      [label]="'buscar'"
+      [type]="'text'"
+    />
+
+    <button
+      class="buton-search"
+      aria-label="Buscar"
+      (click)="search()"
+    >
+      <mat-icon>search</mat-icon>
+    </button>
+  </section>
+
+  <button 
+    class="add-new-card"
+    mat-flat-button
+    (click)="openDialog()"
+  >Agregar Nueva Entrada</button>
 </section>
-
-<app-form (addNewCard)="addNewCard($event)"/>
 
 <section class="z-index grid-test">
   <app-card *ngFor="let card of sourceToShow" [data]="card"/>
 </section>
+
+<footer>
+  <button 
+    class="button-export"
+    mat-flat-button
+    (click)="exportData()"
+  >export Data</button>
+
+</footer>

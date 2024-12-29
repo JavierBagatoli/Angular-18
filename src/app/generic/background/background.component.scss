@@ -19,7 +19,7 @@
 div{
   display: flex;
   animation-name: displacement;
-  animation-duration: 20s;
+  animation-duration: 40s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 
@@ -41,25 +41,32 @@ div{
   
 .animation-inverse{
   animation-name: displacement2;
-  animation-duration: 20s;
+  animation-duration: 40s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
   
   @keyframes displacement {
-    from {
+    0% {
       transform: translateX(-20%);
     }
-    to {
+    50% {
       transform: translateX(0%);}
+    100%{
+      transform: translateX(-20%);
+    }
   }
   
   @keyframes displacement2 {
-    from {
+    0% {
       transform: translateX(0%);
     }
-    to {
-      transform: translateX(-20%);}
+    50% {
+      transform: translateX(-20%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
   }
   
   

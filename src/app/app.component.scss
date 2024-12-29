@@ -10,6 +10,34 @@
   height: 62px;
   display: flex;
   z-index: 0;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  section{
+    display: flex;
+    
+  }
+}
+
+footer{
+  padding-left: 2rem;
+  height: 62px;
+  display: flex;
+  z-index: 0;
+
+  justify-content: space-around;
+
+  background: linear-gradient(217deg, #000000, #3b5965);
+  background-size: 400% 400%;
+  -webkit-animation: AnimationName 9s ease infinite;
+  -moz-animation: AnimationName 9s ease infinite;
+  animation: AnimationName 9s ease infinite;
+
+  .button-export{
+    margin-top: 0.8rem;
+  }
 }
 
 .max-width {
@@ -18,8 +46,26 @@
 }
 
 .buton-search{
-  margin-left: 0.5rem;
-  margin-top: 0.5rem;
+  margin-left: 0.1rem;
+  height: 3.50rem;
+  width: 2.5rem;
+  border-radius: 0px 10px 10px 0px !important;
+  background-color: #69f0ae;
+  border-color: #484848;
+  border-width: 0px;
+  //filter: drop-shadow(0px 5px 10px #424242b9);
+
+  &:hover{
+    background-color: #58c892;
+  }
+}
+
+.buton-search:hover{
+  border-radius: 0px 10px 10px 0px !important;
+}
+
+.add-new-card{
+  height: 3.4rem;
 }
 
 @-webkit-keyframes AnimationName {

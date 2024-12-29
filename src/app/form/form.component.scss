@@ -1,17 +1,23 @@
 h1{
+  margin-top: 0rem;
   justify-self: center;
   color: white;
+  font-size: xx-large;
 }
 
 .body-form{
-  width: 20%;
-  justify-content: center;
   display: flex;
   flex-direction: column;
+  padding: 2rem;
   background: linear-gradient(0deg, rgba(40,44,52,1) 0%, rgba(17,0,32,.5) 100%);
-
   section{
+    text-align: center;
     display: flex;
-    flex-direction: column;    
+    flex-direction: column;
+    justify-content: center;
   }
+}
+
+.button-create{
+  margin-top: 1rem
 }

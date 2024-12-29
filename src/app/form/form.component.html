@@ -1,38 +1,40 @@
-<div class="body-form">
-  <section class="flex flex-column aling-content-center">
-    <h1>Add Card</h1>
-  </section>
-  <section class="flex flex-column">
-    <app-input
-      [form]="form"
-      [controlName]="'title'"
-      [label]="'Title'"
-    />
 
-    <app-input
-      [form]="form"
-      [controlName]="'label'"
-      [label]="'Label'"
-    />
+  <div class="body-form">
+    <section class="flex flex-column">
+      <h1>Añadir Entrada</h1>
+    </section>
+    <section class="flex flex-column w-100 align-items-center justify-content-center">
+      <app-input
+        [form]="form"
+        [controlName]="'title'"
+        [label]="'Titulo'"
+      />
 
-    <app-input
-      [form]="form"
-      [controlName]="'age'"
-      [label]="'Age'"
-      [type]="'number'"
-    />
+      <app-input
+        [form]="form"
+        [controlName]="'label'"
+        [label]="'Etiqueta'"
+      />
 
-    <app-textarea
-      [form]="form"
-      [controlName]="'description'"
-      [label]="'Description'"
-    />
-    
-    <div>
+      <app-input
+        [form]="form"
+        [controlName]="'age'"
+        [label]="'Año'"
+        [type]="'number'"
+      />
+
+      <app-textarea
+        [form]="form"
+        [controlName]="'description'"
+        [label]="'Descripción'"
+      />
+      
+
       <button
         [disabled]="form.invalid"
         mat-flat-button 
-        (click)="send()">crear</button>
-    </div>
-  </section>
-</div>
+        class="button-create"
+        (click)="send()">Crear</button>
+
+    </section>
+  </div>
